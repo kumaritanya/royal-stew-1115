@@ -1,141 +1,426 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-   <title>Shopping Cart</title>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
-   <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #navbar{
+            width:100%;
+            height:50px;
+            margin:auto;
+            /* border:1px solid black; */
+            /* padding-top:25px; */
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+    
+            
+        }
+        .navinner{
+            width:100%;
+            height:50px;
+            /* border:1px solid black; */
+            display:flex;
+            
+            /* margin-left:20px; */
+        }
+        .navinner>div{
+             margin-left:30px;
+            margin-top:15px;
+            margin-right: 10px;
+            justify-content:left;
+            /* justify-content:space-around; */
+            /* margin: auto; */
+            /* align-content:space-around; */
+        }
+        .navinner>div>a{
+            text-decoration: none;
+            color:black;
+            font-size:10px;
+            font-family:Inter;
+            font-weight:normal;
+        }
+        #title>div{
+            /* font-family: inter;
+            font-weight:lighter; */
+            border:1px solid transparent;
+            width:100px;
+            height:50px;
+            margin:auto;
+            
+        }
+        #title>div>a>img{
+            /* margin-top:15px; */
+            width:100%;
+            height:50px;
+            margin: auto;
+            /* margin-right: 100px; */
+        }
+        .navright{
+            width:100%;
+            height:50px;
+            /* border:1px solid black; */
+            display:flex;
+            
+            /* margin-left:20px; */
+        }
+        .navright>div{
+             margin-left:30px;
+            margin-top:15px;
+            margin-right: 40px;
+           
+        }
+        .navright>div>a{
+            text-decoration: none;
+            color:black;
+            font-size:10px;
+            font-family:Inter;
+            font-weight:normal;
+            
+
+        }
+        .ckmain{
+            width:70%;
+            height:600px;
+            margin:auto;
+            /* border: 1px solid black; */
+            display:grid;
+            grid-template-columns:70% 30%;
+            grid-gap:10px;
+        }
+        .ckleft{
+            border-top: 1px solid #333333;
+        }
+        #h4main1{
+            display: flex;
+            /* border-top: 1px solid #333333; */
+            border-bottom: 1px solid #333333;
+            padding:8px;
+            border-length:90%;
+            border-color:gray;
+        }
+        #h4main1>img{
+            width:10%;
+            height:120px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        #m4{
+            color:#333333;
+            font-family: Inter;
+            font-size:12px;
+            text-decoration:none;
+            /* font-weight:bold; */
+        }
+        #m5{
+            color:#333333;
+            font-family: Inter;
+            font-size:10px;
+            /* padding:5px; */
+        }
+        #m6{
+            color:#333333;
+            font-family: Inter;
+            font-size:10px;
+            font-weight:bold;
+        }
+        #c1{
+            justify-content:space-around;
+            align-items: left;
+        }
+        #size{
+            /* width:85%; */
+            /* height:30px; */
+            color:#333333;
+            font-family:Inter;
+            font-size:10px;
+            margin-top:10px;
+            outline:none;
+            margin-bottom: 10px;
+        }
+        select option{
+            color:#333333;
+            font-family:Inter;
+            font-size:10px;
+            margin-top:2px;
+        }
+        /* .button{
+          display:flex;
+          margin-top:100px;
+          position:relative;
+        } */
+        .ckright{
+            width:100%;
+            height:300px;
+            /* align-items: center;  */
+            /* margin:auto; */
+            padding-left:100px;
+        }
+        #but1{
+            width:100%;
+            height:40px;
+            font-family:Inter;
+            font-size:12px;
+            background-color:black;
+            color:white;
+            outline:none;
+            border:none;
+            font-weight: bold;
+            /* margin: auto; */
+            text-decoration:none;
+            
+        }
+        #f1{
+            width:10%;
+            height:50px;
+            align-items:center;
+            display:flex;
+            justify-content:space-between;
+            /* border: 1px solid black; */
+            /* margin:auto; */
+            margin-left:300px;
+            color:gray;
+            font-family:Inter;
+            font-size:12px;
+       }
+       .c3{
+           display: grid;
+           grid-template-columns: repeat(2,1fr);
+           grid-template-rows:repeat(3,1fr);
+           grid-gap:30px;
+       }
+       #footer{
+            width:80%;
+            height:100px;
+            /* border:1px solid black; */
+            margin:auto;
+            padding-top:15px;
+            font-family:Inter;
+            font-weight:normal;
+        }
+      #footerupper{
+            width:80%;
+            display:flex;
+            margin:auto;
+        }
+        #footerupper>a{
+            text-decoration: none;
+            margin:auto;
+            padding-top: 30px;
+            font-size:9px;
+            color:black;
+            font-size:10px;
+            font-weight:normal;
+        }
+        #footerlower{
+            width:40%;
+            display:flex;
+            margin:auto;
+        }
+        #footerlower>a{
+
+            margin: auto;
+            padding-top:15px;
+           text-decoration: none;
+           color:gray;
+           font-size:1ch;
+           font-weight:normal;
+        }
+        #icons{
+            display:flex;
+        }
+        #icons>img{
+            /* margin-left:5px; */
+            margin: auto;
+            padding-top:30px;
+            padding-left: 5px;
+            width:15px;
+            height:15px
+        }
+       @media only screen and (min-width:378px) and (max-width:768px){
+            .ckmain{
+                grid-template-columns:repeat(1,1fr);
+                width:100%;
+                margin-top:100px;
+            }
+            #footerupper{
+                flex-direction:column;
+                margin: auto;
+            }
+            .navinner,#footerlower{
+                display:none;
+            }
+            .navright{
+                display:none;
+            }
+            .ckright{
+                padding-left:0px;
+            }
+            #f1{
+                padding-top:50px;
+                padding-bottom:0px;
+                margin-left:20px;
+
+            }
+
+        }
+        @media only screen and (min-width:0px) and (max-width:378px){
+            .ckmain{
+                width:100%;
+                grid-template-columns:repeat(1,1fr);
+            }
+            #footerlower{
+                width:100%;
+                flex-direction:column;
+            }
+            #footerupper{
+                flex-direction:column;
+                margin: auto;
+            }
+            .navinner,#footerlower{
+                display:none;
+            }
+            .navright{
+                display:none;
+            }
+            .ckright{
+                padding-left:0px;
+            }
+            #f1{
+                padding-top:50px;
+                padding-bottom:0px;
+                margin-left:20px;
+                
+            }
+        }
+    </style>
 </head>
-
 <body>
-   <section>
-      <div class="container">
-         <h2>My shopping cart</h2>
-         <div class="cart">
-            <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
-                  <div class="row">
-                     <div class="col-md-7 center-item">
-                        <img src="images/product-1.png" alt="" />
-                        <h5>iPhone 11 128GB Black</h5>
-                     </div>
-
-                     <div class="col-md-5 center-item">
-                        <div class="input-group number-spinner">
-                           <button onclick="handelProductChange('phone',false)" class="btn btn-default">
-                              <i class="fas fa-minus"></i>
-                           </button>
-                           <input id="phone-count" type="number" min="0" class="form-control text-center" value="1" />
-                           <button onclick="handelProductChange('phone',true)" class="btn btn-default">
-                              <i class="fas fa-plus"></i>
-                           </button>
-                        </div>
-                        <h5 id="phone-total">$ 1219</h5>
-                        <img src="images/remove.png" alt="" class="remove-item" />
-                     </div>
-                  </div>
-               </div>
-
-               <div class="cart-item">
-                  <div class="row">
-                     <div class="col-md-7 center-item mx-auto">
-                        <img src="images/product-2.png" alt="" />
-                        <h5>iPhone 11 Silicone Case - Black</h5>
-                     </div>
-                     <div class="col-md-5 center-item">
-                        <div class="input-group number-spinner">
-                           <button onclick="handelProductChange('case',false);" class="btn btn-default">
-                              <i class="fas fa-minus"></i>
-                           </button>
-                           <input id="case-count" type="number" min="0" class="form-control text-center" value="1" />
-                           <button onclick="handelProductChange('case',true);" class="btn btn-default">
-                              <i class="fas fa-plus"></i>
-                           </button>
-                        </div>
-                        <h5 id="case-total">$ 59</h5>
-                        <img src="images/remove.png" alt="" class="remove-item" />
-                     </div>
-                  </div>
-               </div>
-
-               <div class="cart-item">
-                  <div class="row">
-                     <div class="col-md-8">
-                        <h5>Subtotal:</h5>
-                        <h5>Tax:</h5>
-                        <h5>Total:</h5>
-                     </div>
-
-                     <div class="col-md-4 status">
-                        <h5 id="total-price">$ 1278</h5>
-                        <h5 id="tax-amount">$ 0</h5>
-                        <h5 id="grand-total">$ 1278</h5>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">
-                     Check Out
-                  </button>
-               </div>
+    <div id="navbar">
+        <div class="navinner">
+            <div>
+                <a href="">EVERYTHING ELSE</a> 
             </div>
+            <div>
+                <a href="">SALE</a> 
+            </div>
+            <div>
+                <a href="">SEARCH</a> 
+            </div>
+        </div>
+       <div id="title">
+           <div>
+            <a href=""><img src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg" alt=""></a>
+           </div>
+       </div>
+       <div class="navright">
+        <div>
+         <a href="">ENGLISH</a>   
+        </div>
+        <div>
+            <a href="signup.html">LOGIN</a> 
+        </div>
+        <div>
+            <a href="">WISHLIST</a> 
+        </div>
+        <div>
+            <a href="checkout.html">SHOPPING BAG</a> 
+        </div>
+    </div>
+    </div>
+    <div id="f1">
+        <div id="f2">ITEMS</div>
+        <!-- <div id="f3">TOTAL</div> -->
+    </div>
+    <div class="ckmain">
+        <!-- <div id="m4">SHOPPING BAG</div> -->
+        <div class="ckleft">
+            
+            <div id="h4main1">
+                <img src="https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/211381M180150_1/thom-browne-grey-4-bar-hooded-jacket.jpg" alt="">
+                <div>
+                    <div><a id="m4" href="mensproduct.html">THOM BROWNE</a></div>
+                    <div id="m5">Grey 4-bar hooded jacket</div>
+                    <type="text" id="size" placeholder="">
+                        <option value="">-</option>
+                        <option value="">XXS</option>
+                        <option value="">S</option>
+                        <option value="">M</option>
+                        <option value="">L</option>
+                        <option value="">XL</option>
+                        <option value="">XXL</option>
+                    </select>
+                    <div id="m4">$1470</div>
+                </div>
+            </div>
+            <div id="h4main1">
+             <img src="https://img.ssensemedia.com/images/b_white,g_center,f_auto,q_auto:best/221129F098006_1/acne-studios-beige-french-terry-logo-sweatshirt.jpg" alt="">
+             <div>
+              <div><a id="m4" href="mensproduct.html">ACNE STUDIOS</a></div>
+              <div id="m5">Beige French Terry Logo Sweatshirt</div>
+              <type="text" id="size" placeholder="">
+                <option value="">-</option>
+                <option value="">XXS</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+                <option value="">XXL</option>
+            </select>
+              <div id="m4">$265</div>
+             </div>
          </div>
-      </div>
-   </section>
-   <script>
-      function handelProductChange(product, isIncrease) {
-         const productCount = getInputValue(product);
-
-         let productNewCount = productCount;
-
-         if (isIncrease == true) {
-            productNewCount = productCount + 1;
-         }
-         if (isIncrease == false && productCount > 0) {
-            productNewCount = productCount - 1;
-         }
-
-         document.getElementById(product + '-count').value = productNewCount;
-
-         let productNewTotal = 0;
-         if (product == 'case') {
-            productNewTotal = productNewCount * 59;
-         }
-         if (product == 'phone') {
-            productNewTotal = productNewCount * 1219;
-         }
-
-         document.getElementById(product + '-total').innerText =
-            '$ ' + productNewTotal;
-         handelCheckout();
-      }
-
-      function handelCheckout() {
-         const phoneCount = getInputValue('phone');
-
-         const caseCount = getInputValue('case');
-
-         const totalPrice = caseCount * 59 + phoneCount * 1219;
-         document.getElementById('total-price').innerText = '$ ' + totalPrice;
-
-         const tax = Math.round(totalPrice * .1);
-         document.getElementById('tax-amount').innerText = '$ ' + tax;
-
-         const grandTotal = totalPrice + tax;
-         document.getElementById('grand-total').innerText = '$ ' + grandTotal;
-      }
-
-      function getInputValue(product) {
-         const productInput = document.getElementById(product + '-count');
-         const productCount = parseInt(productInput.value);
-         return productCount;
-      }
-
-   </script>
+         
+        </div>
+        <div class="ckright">
+            <div class="c3">
+                <div id="m5">Total</div>
+                <div id="m5">$1735.OO USD</div>
+                <DIV id="m5">Shipping estimate</DIV>
+                <div id="m5">Calculated at Checkout</div>
+                <div id="m6">Order Total</div>
+                <div id="m6">$1735.00 USD</div>
+            </div>
+            <br>
+            <button id="but1" type="submit"><a href="payment.html" style="text-decoration:none;color:white">PROCEED TO CHECKOUT</a></button>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footerupper">
+            
+                    <a href="">COUNTRY/REGION:INDIA</a>   
+             
+                    <a href="">NEWSLETTER SIGNUP</a>   
+           
+                    <a href="">CUSTOMER CARE</a>   
+           
+                    <a href="">LOCATION</a>   
+            
+                    <a href="">EDITORIAL ARCHIVE</a>   
+         
+                    <a href="">CAREER</a>   
+            
+                    <a href="">SITEMAP</a> 
+                    <div id="icons">
+                        <src="https://img.icons8.com/material-rounded/24/000000/facebook-f--v1.png"/>
+                        <src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"/>
+                        <src="https://img.icons8.com/fluency-systems-filled/48/000000/instagram-new.png"/>
+                        <src="https://img.icons8.com/material-rounded/24/000000/youtube-play.png"/>
+                    </div>    
+            </div>
+            <div id="footerlower">
+                <a href=""><src="https://img.icons8.com/material-outlined/24/000000/copyright.png" width="11" height="11"/>2022 ssense.com</a>   
+         
+                <a href="">Terms & Condition</a>   
+       
+                <a href="">Privacy Policy</a>   
+       
+                <a href="">Cookies</a>   
+        
+                <a href="">Accessibility</a> 
+               
+            </div>
+        </div>
 </body>
-
 </html>

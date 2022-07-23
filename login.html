@@ -1,71 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #container{
-            width:35%;
-            height:780px;
-            border:1px solid;
-            margin:auto;
-            margin-top:100px;
-            border-radius:15px;
-            background-color: white;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | SSENSE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    
+   <style>
+      #navbar{
+            width:100%;
+            height:50px;
+            margin: auto;
+            /* border:1px solid black; */
+            /* padding-top:25px; */
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+    
+            
         }
-        #container>p:nth-child(1){
-            margin:auto;
-            margin-top:100px;
-            margin-left:200px;
-            font-size: 50px;
-            font-weight: bolder;
-            padding-bottom:80px;
+        .navinner{
+            width:100%;
+            height:50px;
+            /* border:1px solid black; */
+            display:flex;
+            
+            /* margin-left:20px; */
         }
-       .details{
-        font-size:25px;
-        opacity:40%;
-        margin-left:60px;
-        font-weight: 400px;
+        .navinner>div{
+             margin-left:30px;
+            margin-top:15px;
+            margin-right: 10px;
+            justify-content:left;
+            /* justify-content:space-around; */
+            /* margin: auto; */
+            /* align-content:space-around; */
+        }
+        .navinner>div>a{
+            text-decoration: none;
+            color:black;
+            font-size:10px;
+            font-family:Inter;
+            font-weight:normal;
+        }
+        #title>div{
+            /* font-family: inter;
+            font-weight:lighter; */
+            border:1px solid transparent;
+            width:100px;
+            height:50px;
+            margin:auto;
+            
+        }
+        #title>div>a>img{
+            /* margin-top:15px; */
+            width:100%;
+            height:50px;
+            margin: auto;
+            /* margin-right: 100px; */
+        }
+        .navright{
+            width:100%;
+            height:50px;
+            /* border:1px solid black; */
+            display:flex;
+            
+            /* margin-left:20px; */
+        }
+        .navright>div{
+             margin-left:30px;
+            margin-top:15px;
+            margin-right: 40px;
+           
+        }
+        .navright>div>a{
+            text-decoration: none;
+            color:black;
+            font-size:10px;
+            font-family:Inter;
+            font-weight:normal;
+            
+
+        }
+       #container{
+           width: 50%;
+           height:800px;
+           font-family:'Inter',sans-serif;
+          
        }
-       #container>hr{
-        width:80%;
-        height:3px;
-        border:none;
-        background-color: black;
-        opacity: 40%;
+       #inner{
+           width:300px;
+           height:500px;
+           margin:auto;
+           text-align:center;
+           font-family:'Inter',sans-serif;
+           border:1px solid transparent;
+           padding-top:30px;
        }
-       #container>button{
-        width:80%;
-        height:60px;
-        margin:auto;
-        margin-top:40px;
-        margin-left:50px;
-        background-color: blueviolet;
-        color:white;
-        font-size: 20px;
-        margin-bottom:80px;
+       h3{
+        font-size: 30px;
+        margin-top: 30px;
+        color: black; 
+        letter-spacing:5px;
        }
-       .end{
-        text-align:center;
-        font-size: 18px;
-        font-weight: 800px;
-        opacity: 70%;
-        
+       #email{
+           width:100%;
+           height:25px;
+           margin-top:50px;
+           border:2px solid black;
+           /* border-bottom: 1px solid gray; */
+           color:#333333;
+           outline:none; 
+           font-style:normal;
+           border-radius: 5px;
        }
+       #password{
+           width:100%;
+           height:25px;
+           margin-top: 20px;
+           border:2px solid black;
+           /* border-bottom: 1px solid gray; */
+           color:#333333;
+           outline:none; 
+           font-style:normal;
+           border-radius: 5px;
+       }
+      
+       #two{
+           margin-top:50px;
+           text-align:center;
+           width:100%;
+           height:40px;
+           border-radius: 5px;
+           background-color:black ;
+           color:white;
+           border:none;
+           font-weight: light-bold;
+           font-size: 15px;
+       }
+
+      p {
+        font-size:9px;
+        position: relative;
+        font-weight: lighter;
+        color: #333333;
+        font-family: sans-serif;
+        line-height: 15px;
+      }
+
+      span {
+        font-size: 16px;
+        margin-top: 50px;
+        color: gray;
+      }
+      #footer{
+            width:80%;
+            height:100px;
+            /* border:1px solid black; */
+            margin:auto;
+            padding-top:15px;
+            font-family:Inter;
+            font-weight:normal;
+        }
+      #footerupper{
+            width:80%;
+            display:flex;
+            margin:auto;
+        }
+        #footerupper>a{
+            text-decoration: none;
+            margin:auto;
+            padding-top: 30px;
+            font-size:9px;
+            color:black;
+            font-size:10px;
+            font-weight:normal;
+        }
+        #footerlower{
+            width:40%;
+            display:flex;
+            margin:auto;
+        }
+        #footerlower>a{
+
+            margin: auto;
+            padding-top:15px;
+           text-decoration: none;
+           color:gray;
+           font-size:1ch;
+           font-weight:normal;
+        }
+        #icons{
+            display:flex;
+        }
+        #icons>img{
+            /* margin-left:5px; */
+            margin: auto;
+            padding-top:30px;
+            padding-left: 5px;
+            width:15px;
+            height:15px
+        }
+      @media only screen and (min-width:376px) and (max-width:768px){
+            #inner{
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+        @media only screen and (min-width:0px) and (max-width:376px){
+            #inner{
+                width:100%;
+                grid-template-columns:repeat(1,1fr);
+
+            }
+        }
     </style>
-</head>
-<body color=purple>
-   <div id="container">
-    <p>Login</p>
-    <p class="details">Email</p>
-    <hr>
-    <p class="details">Password</p>
-    <hr>
-    <button>Login</button>
-    <p class="end">Forgot Password?</p>
-    <p class="end">Don't have an account? Signup!</p>
-   </div> 
-</body>
+  </head>
+  <body>
+    <div id="navbar">
+      <div class="navinner">
+          <div>
+           <a href="mens.html">MENSWARE</a>   
+          </div>
+          <div>
+              <a href="womens.html">WOMENSWARE</a> 
+          </div>
+          <div>
+              <a href="">EVERYTHING ELSE</a> 
+          </div>
+          <div>
+              <a href="">SALE</a> 
+          </div>
+          <div>
+              <a href="">SEARCH</a> 
+          </div>
+      </div>
+     <div id="title">
+         <div>
+          <a href="home.html"><img src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg" alt=""></a>
+         </div>
+     </div>
+     <div class="navright">
+      <div>
+       <a href="">ENGLISH</a>   
+      </div>
+      <div>
+          <a href="signup.html">LOGIN</a> 
+      </div>
+      <div>
+          <a href="">WISHLIST</a> 
+      </div>
+      <div>
+          <a href="checkout.html">SHOPPING BAG</a> 
+      </div>
+  </div>
+  </div>
+    <!-- <div id="container"> -->
+        <div id="inner">
+            <h3>LOGIN</h3>
+            <form action="" id="form">
+                <!-- <label for="">E</label> -->
+                <input id="email" type="email" placeholder="USERNAME" /><br>
+        ​
+                <!-- <label for="">Password</label> -->
+                <input id="password" type="password"  placeholder="PASSWORD" /><br>
+        ​
+                <button id="two" type="submit">CONTINUE</button>
+            
+
+        </div>
+        <div id="footer">
+          <div id="footerupper">
+              
+                      <a href="">COUNTRY/REGION:INDIA</a>   
+               
+                      <a href="">NEWSLETTER SIGNUP</a>   
+             
+                      <a href="">CUSTOMER CARE</a>   
+             
+                      <a href="">LOCATION</a>   
+              
+                      <a href="">EDITORIAL ARCHIVE</a>   
+           
+                      <a href="">CAREER</a>   
+              
+                      <a href="">SITEMAP</a> 
+                      <div id="icons">
+                           <src="https://img.icons8.com/material-rounded/24/000000/facebook-f--v1.png"/>
+                          <src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"/>
+                          <src="https://img.icons8.com/fluency-systems-filled/48/000000/instagram-new.png"/>
+                          <src="https://img.icons8.com/material-rounded/24/000000/youtube-play.png"/>
+                      </div>    
+              </div>
+              <div id="footerlower">
+                  <a href=""><src="https://img.icons8.com/material-outlined/24/000000/copyright.png" width="11" height="11"/>2022 ssense.com</a>   
+           
+                  <a href="">Terms & Condition</a>   
+         
+                  <a href="">Privacy Policy</a>   
+         
+                  <a href="">Cookies</a>   
+          
+                  <a href="">Accessibility</a> 
+                 
+              </div>
+          </div>
+        
+    <!-- </div> -->
+  </body>
 </html>
+<script>
+  document.getElementById("myform").addEventListener("submit", signIn);
+  var regUser = JSON.parse(localStorage.getItem("user")) || [];
+  function signIn(e) {
+    e.preventDefault();
+    var email = document.getElementById("userid").value;
+    var password = document.getElementById("password").value;
+
+    if (!email || !password) {
+      alert("Enter All of the details");
+    } else {
+      for (var i = 0; i < regUser.length; i++) {
+        if (regUser[i].email === email && regUser[i].password === password) {
+          alert("Signin Sucessfully");
+          window.location.href = "https://www.google.com";
+          //   "file:///D:/Masai%20Codes/Day-15/E-commerce/products.html";
+          return;
+        } else if (email == "admin@gmail.com" && password == "admin") {
+          alert("Admin Signin Sucessfully");
+          //redirect admin page
+          window.location.href = "https://www.youtube.com";
+          //   "file:///D:/Masai%20Codes/Day-15/E-commerce/form.html";
+          return;
+        }
+      }
+      alert("Wrong Credintial");
+    }
+  }
+</script>
